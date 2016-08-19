@@ -1,0 +1,18 @@
+{% extends "src/templates/layout_amp.nunjucks" %}
+
+{% block content %}
+<main class="some-content l-full">
+  <ol class="contents">
+    {% for item in items %}
+      <li class="contents__item">
+        <a href="{{item.url}}">
+          <span class="contents__date">{{item.date}}</span>
+          <span class="contents__title">{{item.title}}</span>
+          <span class="contents__abstract">{{item.description}}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ol>
+
+</main>
+{% endblock %}

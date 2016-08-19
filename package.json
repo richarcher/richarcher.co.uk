@@ -1,0 +1,42 @@
+{
+  "author": "Rich Archer",
+  "description": "British web developer; South Africa inhabiter; Web-standards gospeller",
+  "email": "rich@richarcher.co.uk",
+  "scripts": {
+    "build": "gulp build --type production",
+    "preview": "gulp",
+    "deploy:staging": "s3-deploy './build/**' --cwd './build/' --bucket staging.richarcher.co.uk",
+    "deploy:production": "s3-deploy './build/**' --cwd './build/' --bucket richarcher.co.uk --cache 604800 --etag --gzip"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2",
+    "critical": "^0.7.3",
+    "del": "^2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-front-matter": "^1.3.0",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-rss": "0.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sitemap": "^4.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-swig": "^0.8.0",
+    "gulp-util": "^3.0.7",
+    "gulp-wrap": "^0.13.0",
+    "highlight.js": "^9.6.0",
+    "map-stream": "0.0.6",
+    "markdown-it": "^7.0.1",
+    "markdown-it-block-image": "0.0.3",
+    "markdown-it-footnote": "^3.0.1",
+    "markdown-it-imsize": "^2.0.1",
+    "nunjucks": "^2.4.2",
+    "s3-deploy": "^0.5.2",
+    "through2": "^2.0.1",
+    "vinyl": "^1.2.0"
+  }
+}

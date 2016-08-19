@@ -1,0 +1,23 @@
+$block_width: 40em;
+
+$base-font-size: 16px;
+$large-font-size: 21px;
+
+
+$palettes: (
+  plain: (
+    base: #fff,
+  ),
+  noir: (
+    base: #454545,
+    mid-dark: transparentize(#000000, .3),
+    dark: #000000
+  ),
+  intense: (
+    base: #e90101,
+    dark: #8a0909
+  ),
+  jaffa: (
+    base: #ffc401
+  )
+);

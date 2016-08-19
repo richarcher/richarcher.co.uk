@@ -1,0 +1,22 @@
+{% extends "src/templates/layout.nunjucks" %}
+
+{% block content %}
+<main class="some-content">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post hentry">
+    <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://google.com/article"/>
+
+    <h1 itemprop="name headline" class="h-main-heading entry-title">{{ title }}</h1>
+
+    <div itemprop="text articleBody" class="post__content entry-content l-full">
+      <time datetime="{{dateFormatUTC}}" itemprop="datePublished" class="post__date published updated">{{date}}</time><span class="post__author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person"> by <a href="mailto://rich@richarcher.co.uk" class="fn"><span itemprop="name" >{{ author }}</span></a></span>
+
+{{contents}}
+
+    </div>
+    <meta itemprop="datePublished" content=""/>
+    <meta itemprop="dateModified" content=""/>
+  </article>
+
+</main>
+{% endblock %}

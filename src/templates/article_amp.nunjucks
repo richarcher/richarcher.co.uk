@@ -1,0 +1,57 @@
+{% extends "src/templates/layout_amp.nunjucks" %}
+
+{% block content %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{root}}{{url}}"
+  },
+  "headline": "{{title}}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{root}}/img/apple-touch-icon.png",
+    "height": 180,
+    "width": 180
+  },
+  "datePublished": "{{dateFormatUTC}}",
+  "author": {
+    "@type": "Person",
+    "name": "Rich Archer"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rich Archer",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{root}}/img/favicon-96x96.png",
+      "width": 96,
+      "height": 96
+    }
+  },
+  "description": "{{description}}"
+}
+</script>
+<main class="some-content">
+
+  <article class="post">
+
+    <h1 class="h-main-heading entry-title" itemprop="headline">{{ title }}</h1>
+
+    <div class="post__content entry-content l-full">
+
+      <time datetime="{{dateFormatUTC}}" class="post__date published updated"  itemprop="datePublished" >{{date}}</time>
+      <span class="post__author vcard" itemprop="author" itemscope itemtype="https://schema.org/Person"> by
+        <a href="mailto://rich@richarcher.co.uk" class="fn"><span itemprop="name">{{ author }}</span></a></span>
+      <meta itemprop="description" content="{{description}}"></meta>
+
+{{contents}}
+
+    </div>
+
+  </article>
+
+</main>
+{% endblock %}

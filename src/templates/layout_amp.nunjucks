@@ -1,0 +1,59 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+  <meta name="description" content="{{description}}">
+  <title>{{title}}</title>
+  <link itemprop="mainEntityOfPage" rel="canonical" href="index.html" />
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+{% if not devBuild %}  <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>{% endif %}
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+</head>
+<body>
+
+  <header class="the-header">
+
+    <div class="the-header__inner some-content">
+      <a href="{{root}}/" class="the-header__logo">Richard Archer</a>
+    </div>
+
+  </header>
+
+  {% block content %}{% endblock %}
+
+  <footer class="some-content the-footer">
+
+    <p><a href="{{root}}/">Richarcher.co.uk</a> is the collected ramblings of Rich Archer, a web developer living in beautiful <b>Cape Town, South Africa</b>. Here, you will find various musings on web development, user-centric design, life, and any other thoughts that occur to him.</p>
+
+    <p>
+      <span class="source-org vcard copyright">&copy; <span class="org fn">{{ author }}</span> 2016</span>
+      <a class="link-twitter" href='https://twitter.com/slocombe'>Twitter</a>,
+      <a class="link-linkedin" href='https://za.linkedin.com/in/rich-archer-0769672'>Linkedin</a>,
+      <a class="link-github" href='https://github.com/richarcher/'>Github</a>,
+      <a class="link-flickr" href='https://www.flickr.com/photos/slocombe3000/'>Flickr</a>,
+      <a class="link-flickr" href='https://www.instagram.com/richarcher/'>Instagram</a>,
+      <a class="link-feed" href='{{root}}/feed.xml'>RSS</a>.
+    </p>
+
+  </footer>
+{% if not devBuild %}
+<amp-analytics type="googleanalytics" id="analytics1">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-551795-2"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
+{% endif %}
+</body>
+</html>
