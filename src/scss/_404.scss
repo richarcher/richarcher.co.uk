@@ -1,0 +1,72 @@
+.page-404 {
+  background-color: #000;
+}
+
+.page-404__title {
+  position: relative;
+  height: 70vh;
+}
+
+.page-404__title h1 {
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  transform:
+              translateY(50%)
+              translateX( -50%)
+              perspective( 600px )
+              rotateX( 30deg )
+              rotateY( -25deg )
+              rotateZ( 20deg )
+              scale( 1)
+              ;
+  filter: blur(2px);
+  background-image: linear-gradient(-40deg, #fff, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 100;
+  font-size: 9em;
+  letter-spacing: .3em;
+  animation-name: zoom;
+  animation-duration: 10s;
+}
+
+.page-404__copy {
+  padding-left: 1em;
+  padding-right: 1em;
+  font-weight: 100;
+  max-width: 30em;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+@keyframes zoom {
+  0% {
+    transform:
+                translateY(50%)
+                translateX( -50%)
+                perspective( 600px )
+                rotateX( 20deg )
+                rotateY( -55deg )
+                rotateZ( -10deg )
+                scale( .5)
+                ;
+    opacity: .3;
+    filter: blur(8px);
+  }
+  100% {
+    transform:
+                translateY(50%)
+                translateX( -50%)
+                perspective( 600px )
+                rotateX( 30deg )
+                rotateY( -25deg )
+                rotateZ( 20deg )
+                scale( 1)
+                ;
+    opacity: 1;
+    filter: blur(2px);
+  }
+}
