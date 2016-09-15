@@ -54,7 +54,7 @@ const globalAttributes = function(file, cb) {
   file.data.relativePath = file.path.replace(file.base,'/');
   file.data.url = file.data.relativePath.replace(/\/index.(html|md)/,'');
   file.data.root = domain;
-  file.data.title = file.frontMatter.title;
+  file.data.title = file.frontMatter.title || `The collected witterings of Rich Archer`;
   file.data.siteTitle = `${file.data.title} | ${file.data.author}`
   file.data.devBuild = devBuild
   cb(null, file);

@@ -58,6 +58,7 @@ const buildHome = function(templates) {
     file.data = {};
     file.data.items = posts;
     file.data.siteTitle = `The collected witterings of Rich Archer`;
+    file.data.title = `The collected witterings of Rich Archer`;
     file.data.root = domain;
     file.data.description = siteInfo.description;
 
