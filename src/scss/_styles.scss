@@ -142,12 +142,12 @@ ol, ul {
   }
 
   .contents__date {
-    color: scale-color(palette(noir, mid-dark), $lightness: 40%);
-    border-bottom: 1px solid scale-color(palette(noir, mid-dark), $lightness: 90%);
+    color: scale-color(palette(noir), $lightness: 20%);
+    border-bottom: 1px solid scale-color(palette(noir), $lightness: 90%);
   }
 
   .contents__abstract {
-    color: palette(noir, mid-dark);
+    color: palette(noir);
     margin-top: 0;
   }
 
