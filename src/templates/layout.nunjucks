@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
   <meta name="twitter:description" property="og:description" content="{{description}}">
   <meta name="twitter:image" property="og:image" content="{{root}}/img/image_258.jpg">
   <link rel="canonical" href="{{root}}{{relativePath}}">
+  <link rel="manifest" href="/manifest.json">
   <link rel="amphtml" href="{{root}}{{url}}/index.amp.html">
   <meta rel="shortcut icon" href="{{root}}/favicon.ico">
   <link rel="icon" href="{{root}}/img/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -51,12 +52,12 @@
 
     <p>
       <span class="source-org vcard copyright">&copy; <span class="org fn">{{ author }}</span> 2016</span>
-      <a class="link-twitter" href='https://twitter.com/slocombe'>Twitter</a>,
-      <a class="link-linkedin" href='https://za.linkedin.com/in/rich-archer-0769672'>Linkedin</a>,
-      <a class="link-github" href='https://github.com/richarcher/'>Github</a>,
-      <a class="link-flickr" href='https://www.flickr.com/photos/slocombe3000/'>Flickr</a>,
-      <a class="link-flickr" href='https://www.instagram.com/richarcher/'>Instagram</a>,
-      <a class="link-feed" href='{{root}}/feed.xml'>RSS</a>.
+      <a href='https://twitter.com/slocombe'>Twitter</a>,
+      <a href='https://za.linkedin.com/in/rich-archer-0769672'>Linkedin</a>,
+      <a href='https://github.com/richarcher/'>Github</a>,
+      <a href='https://www.flickr.com/photos/slocombe3000/'>Flickr</a>,
+      <a href='https://www.instagram.com/richarcher/'>Instagram</a>,
+      <a href='{{root}}/feed.xml'>RSS</a>.
     </p>
   </footer>
 
