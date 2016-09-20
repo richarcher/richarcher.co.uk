@@ -3,6 +3,7 @@ import gutil from 'gulp-util'
 export const baseDir = './'
 export const srcDir = `${baseDir}src`
 export const distDir = `${baseDir}build/`
+export const templateDir = `${srcDir}/templates/`
 
 export const scssSrc = [`${srcDir}/scss/*`]
 export const articlesSrc = [`${srcDir}/html/*articles/**/index.md`]

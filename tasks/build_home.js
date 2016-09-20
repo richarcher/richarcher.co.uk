@@ -12,7 +12,7 @@ import htmlmin from 'gulp-htmlmin';
 import gulpif from 'gulp-if';
 import rename from 'gulp-rename';
 import connect from 'gulp-connect';
-import {articlesSrc, distDir, domain, devBuild} from './config'
+import {templateDir, articlesSrc, distDir, domain, devBuild} from './config'
 
 const siteInfo = JSON.parse(fs.readFileSync('./package.json'));
 
@@ -75,7 +75,7 @@ export function html_home() {
     .pipe(map(globalAttributes))
     .pipe(buildHome())
     .pipe(wrap(function (data) {
-      return fs.readFileSync('./src/templates/home.nunjucks').toString()
+      return fs.readFileSync(`${templateDir}home.nunjucks`).toString()
     }, null, {engine: 'nunjucks'}))
     .pipe(
       gulpif(!devBuild, htmlmin({collapseWhitespace: true}))
@@ -90,7 +90,7 @@ export function amp_home() {
     .pipe(map(globalAttributes))
     .pipe(buildHome())
     .pipe(wrap(function (data) {
-      return fs.readFileSync('./src/templates/home_amp.nunjucks').toString()
+      return fs.readFileSync(`${templateDir}home_amp.nunjucks`).toString()
     }, null, {engine: 'nunjucks'}))
     .pipe(rename({
       extname: ".amp.html"

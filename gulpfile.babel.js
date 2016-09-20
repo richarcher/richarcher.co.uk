@@ -3,7 +3,7 @@
 import gulp from 'gulp';
 import connect from 'gulp-connect';
 
-import {articlesSrc, imagesSrc, scssSrc, staticsSrc} from './tasks/config'
+import {templateDir, articlesSrc, imagesSrc, scssSrc, staticsSrc} from './tasks/config'
 import {clean} from './tasks/clean';
 import {styles} from './tasks/build_sass';
 import {images} from './tasks/images';
@@ -25,6 +25,7 @@ function server() {
 
 function watch() {
   gulp.watch(articlesSrc, gulp.parallel( html_articles, amp_articles ));
+  gulp.watch(`${templateDir}*`, gulp.parallel( html_home, amp_home, html_articles, amp_articles, feed ));
   gulp.watch(staticsSrc, gulp.parallel( statics ));
   gulp.watch(scssSrc, gulp.parallel( styles ) );
   gulp.watch(imagesSrc, gulp.parallel( images ) );
